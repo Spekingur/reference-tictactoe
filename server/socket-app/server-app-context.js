@@ -1,8 +1,8 @@
-const generateUUID = require('client/src/common/framework/uuid');
-const IncomingSocketMessageDispatcher = require('client/src/common/framework/incoming-socket-message-dispatcher');
-const eventRouter = require('client/src/common/framework/message-router')();
-const commandRouter = require('client/src/common/framework/message-router')();
-const queryRouter = require('client/src/common/framework/message-router')();
+const generateUUID = require('../../client/src/common/framework/uuid');
+const IncomingSocketMessageDispatcher = require('../../client/src/common/framework/incoming-socket-message-dispatcher');
+const eventRouter = require('../../client/src/common/framework/message-router')();
+const commandRouter = require('../../client/src/common/framework/message-router')();
+const queryRouter = require('../../client/src/common/framework/message-router')();
 const CommandRepo = require('./command-repo');
 const EventRepo = require('./event-repo');
 
@@ -11,7 +11,7 @@ const APITestBackdoor = require('./apitest-dbbackdoor');
 const ChatHandlerModule = require('./chat/chat-handler');
 const TictactoeContext = require('./tictactoe/tictactoe-context');
 
-const OutgoingSocketIoMessagePort = require('client/src/common/framework/outgoing-socket-io-message-port');
+const OutgoingSocketIoMessagePort = require('../../client/src/common/framework/outgoing-socket-io-message-port');
 
 module.exports=function(injected){
 
