@@ -8,6 +8,8 @@ sudo npm install
 cd ..
 
 npm run startdockerdb
-npm run build
+sudo npm run build
 
+docker rm $(docker ps -a -q)
+docker rmi $(docker images -q)
 sudo service docker stop
