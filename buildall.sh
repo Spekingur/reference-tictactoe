@@ -54,7 +54,7 @@ rc=$?
 #sudo service docker stop
 if [ $1 != 100 ]; then
   echo "Not 100"
-  exit 1
+  exit $rc
 else
   echo "Is 100"
 fi
