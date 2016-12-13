@@ -1,6 +1,6 @@
 #!/bin/bash
 
-rc = $?
+rc=$?
 
 #echo "Starting up Docker service..."
 #sudo service docker start
@@ -18,6 +18,7 @@ then
   exit
 else
   echo "Success!"
+fi
 
 echo "Installing npm on client..."
 cd client
@@ -29,6 +30,7 @@ then
   exit
 else
   echo "Success!"
+fi
 
 #echo "Connecting and starting up postgres database..."
 #npm run startdockerdb
@@ -41,6 +43,7 @@ then
   exit
 else
   echo "Success!"
+fi
 
 #echo "Removing docker containers..."
 #docker rm $(docker ps -a -q)
