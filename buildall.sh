@@ -33,17 +33,16 @@ rc=$?
 #echo "Connecting and starting up postgres database..."
 #npm run startdockerdb
 
-echo "Building app..."
-npm run build
-if [ $rc != 0 ] ; then
-  echo $rc
-  echo "Failure!" $rc
-  exit $rc
+#echo "Building app..."
+#npm run build
+#if [ $rc != 0 ] ; then
+#  echo "Failure!" $rc
+#  exit $rc
 #else
 #  echo "Success!"
-fi
+#fi
 
-echo Testing this
+#echo Testing this
 
 #echo "Removing docker containers..."
 #docker rm $(docker ps -a -q)
@@ -53,3 +52,11 @@ echo Testing this
 
 #echo "Stopping Docker service..."
 #sudo service docker stop
+if [[ $1 < 100 ]]; then
+  echo "Lower than 100"
+  exit 1
+else
+  echo "100 or more"
+fi
+
+echo Test again
