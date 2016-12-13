@@ -35,13 +35,15 @@ rc=$?
 
 echo "Building app..."
 npm run build
-if [[ $rc != 0 ]] ; then
+if [ $rc != 0 ] ; then
   echo $rc
   echo "Failure!" $rc
   exit $rc
 #else
 #  echo "Success!"
 fi
+
+echo Testing this
 
 #echo "Removing docker containers..."
 #docker rm $(docker ps -a -q)
