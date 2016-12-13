@@ -12,8 +12,7 @@ rc=$?
 
 echo "Installing npm on server..."
 npm install
-if [[ $rc != 0 ]]
-then
+if [[ $rc != 0 ]] ; then
   echo "Failure!"
   exit
 else
@@ -24,8 +23,7 @@ echo "Installing npm on client..."
 cd client
 npm install
 cd ..
-if [[ $rc != 0 ]]
-then
+if [[ $rc != 0 ]] ; then
   echo "Failure!"
   exit
 else
@@ -36,9 +34,8 @@ fi
 #npm run startdockerdb
 
 echo "Building app..."
-sudo npm run build
-if [[ $rc != 0 ]]
-then
+npm run build
+if [[ $rc != 0 ]] ; then
   echo "Failure!"
   exit
 else
