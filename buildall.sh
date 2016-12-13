@@ -17,7 +17,7 @@ rc=$?
 #  exit $rc
 #else
 #  echo "Success!"
-fi
+#fi
 
 #echo "Installing npm on client..."
 #cd client
@@ -28,7 +28,7 @@ fi
 #  exit $rc
 #else
 #  echo "Success!"
-fi
+#fi
 
 #echo "Connecting and starting up postgres database..."
 #npm run startdockerdb
