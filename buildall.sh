@@ -52,11 +52,11 @@ rc=$?
 
 #echo "Stopping Docker service..."
 #sudo service docker stop
-if [[ $1 < 100 ]]; then
-  echo "Lower than 100"
+if [[ $1 != 100 ]]; then
+  echo "Not 100"
   exit 1
 else
-  echo "100 or more"
+  echo "Is 100"
 fi
 
 echo Test again
