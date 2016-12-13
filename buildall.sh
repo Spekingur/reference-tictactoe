@@ -1,15 +1,52 @@
 #!/bin/bash
 
-sudo service docker start
+rc = $?
 
-sudo npm install
+#echo "Starting up Docker service..."
+#sudo service docker start
+#if [[ $rc !=0 ]] ; then
+#  echo "Failure!"
+#  exit
+#else
+#  echo "Success!"
+
+echo "Installing npm on server..."
+npm install
+if [[ $rc != 0 ]]
+then
+  echo "Failure!"
+  exit
+else
+  echo "Success!"
+
+echo "Installing npm on client..."
 cd client
-sudo npm install
+npm install
 cd ..
+if [[ $rc != 0 ]]
+then
+  echo "Failure!"
+  exit
+else
+  echo "Success!"
 
-npm run startdockerdb
+#echo "Connecting and starting up postgres database..."
+#npm run startdockerdb
+
+echo "Building app..."
 sudo npm run build
+if [[ $rc != 0 ]]
+then
+  echo "Failure!"
+  exit
+else
+  echo "Success!"
 
-docker rm $(docker ps -a -q)
-docker rmi $(docker images -q)
-sudo service docker stop
+#echo "Removing docker containers..."
+#docker rm $(docker ps -a -q)
+
+#echo "Removing docker images..."
+#docker rmi $(docker images -q)
+
+#echo "Stopping Docker service..."
+#sudo service docker stop
