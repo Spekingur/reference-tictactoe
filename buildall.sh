@@ -2,9 +2,9 @@
 
 sudo service docker start
 
-npm install
+sudo npm install
 cd client
-npm install
+sudo npm install
 cd ..
 
 npm run startdockerdb
