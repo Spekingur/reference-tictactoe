@@ -13,8 +13,8 @@ rc=$?
 echo "Installing npm on server..."
 npm install
 if [[ $rc != 0 ]] ; then
-  echo "Failure!"
-  exit
+  echo "Failure!" $rc
+  exit $rc
 #else
 #  echo "Success!"
 fi
