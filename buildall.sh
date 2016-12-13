@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 rc=$?
 
@@ -10,22 +10,22 @@ rc=$?
 #else
 #  echo "Success!"
 
-echo "Installing npm on server..."
-npm install
-if [[ $rc != 0 ]] ; then
-  echo "Failure!" $rc
-  exit $rc
+#echo Installing npm on server...
+#npm install
+#if [[ $rc != 0 ]] ; then#
+#  echo "Failure! " $rc
+#  exit $rc
 #else
 #  echo "Success!"
 fi
 
-echo "Installing npm on client..."
-cd client
-npm install
-cd ..
-if [[ $rc != 0 ]] ; then
-  echo "Failure!"
-  exit
+#echo "Installing npm on client..."
+#cd client
+#npm install
+#cd ..
+#if [[ $rc != 0 ]] ; then
+#  echo "Failure!" $rc
+#  exit $rc
 #else
 #  echo "Success!"
 fi
@@ -36,8 +36,9 @@ fi
 echo "Building app..."
 npm run build
 if [[ $rc != 0 ]] ; then
-  echo "Failure!"
-  exit
+  echo $rc
+  echo "Failure!" $rc
+  exit $rc
 #else
 #  echo "Success!"
 fi
