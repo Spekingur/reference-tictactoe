@@ -15,8 +15,8 @@ npm install
 if [[ $rc != 0 ]] ; then
   echo "Failure!"
   exit
-else
-  echo "Success!"
+#else
+#  echo "Success!"
 fi
 
 echo "Installing npm on client..."
@@ -26,8 +26,8 @@ cd ..
 if [[ $rc != 0 ]] ; then
   echo "Failure!"
   exit
-else
-  echo "Success!"
+#else
+#  echo "Success!"
 fi
 
 #echo "Connecting and starting up postgres database..."
@@ -38,8 +38,8 @@ npm run build
 if [[ $rc != 0 ]] ; then
   echo "Failure!"
   exit
-else
-  echo "Success!"
+#else
+#  echo "Success!"
 fi
 
 #echo "Removing docker containers..."
