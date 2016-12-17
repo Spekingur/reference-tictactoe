@@ -13,11 +13,9 @@
 echo Installing npm on server...
 npm install
 rc=$?
-if [[ $rc != 0 ]] ; then#
-  echo "Failure! " $rc
+if [[ $rc != 0 ]] ; then
+  echo "Failure with code " $rc
   exit $rc
-else
-  echo "Success!"
 fi
 
 echo "Installing npm on client..."
@@ -25,10 +23,8 @@ cd client
 npm install
 rc=$?
 if [[ $rc != 0 ]] ; then
-  echo "Failure!" $rc
+  echo "Failure with code " $rc
   exit $rc
-else
-  echo "Success!"
 fi
 cd ..
 
@@ -39,10 +35,8 @@ echo "Building app..."
 npm run build
 rc=$?
 if [ $rc != 0 ] ; then
-  echo "Failure!" $rc
+  echo "Failure with code " $rc
   exit $rc
-else
-  echo "Success!"
 fi
 
 #echo Testing this
