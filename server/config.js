@@ -3,7 +3,7 @@ module.exports = {
         sessionSecret: 'developmentSessionSecret'
     },
 
-    production: {
+    prod: {
         sessionSecret: 'productionSessionSecret'
     }
 };
