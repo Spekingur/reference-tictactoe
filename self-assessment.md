@@ -9,6 +9,7 @@ I've currently started everything locally from scratch three times now.
 
 2. Game URL (AWS)
   * Production server (always up):
+  * 52.212.119.153
 
 ## Scripts
 
@@ -84,33 +85,36 @@ Do you have the following Jobs and what happens in each Job:
 
 - Commit Stage
 
-  * I have this. Commit stage builds app, unit tests it, creates a docker image and uploads it to dockerhub.
+  * Yes. Commit stage builds app, unit tests it, creates a docker image and uploads it to dockerhub.
 
 - Acceptance Stage
 
   * No.
 
 - Capacity Stage
+
   * No.
+
 - Other
 
   * Deployment stage. Deploys ready file by pulling it from dockerhub and setting it up on an always-running AWS server.
-
 
 
 Did you use any of the following features in Jenkins?
 
 - Schedule or commit hooks
 
-  * I used commit hooks.
+  * I used commit hooks. I installed a service in Github called 'Jenkins (Github plugin)'.
 
 - Pipeline
   * No.
 
 - Jenkins file
   * No.
+
 - Test reports
   * No.
+  
 - Other
   * No.
 
