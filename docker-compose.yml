@@ -4,14 +4,15 @@ services:
     image: spekingur/tictactoe:${GIT_COMMIT}    # tells compose what image to use for server
     environment:
       - 'NODE_ENV=prod'                           # production running mode of server
-      - 'PGHOST=postgres'                         # database host name
+      - 'PGHOST=db'                         # database host name
       - 'PGPORT=5432'                             # database port
       - 'PGPASSWORD=mysecretpassword'             # database password
       - 'PORT=8080'                               # server port(s)
     ports:
+      - "80:8080"                                 # mapping port 80 to 8080
       - "8080:8080"                               # ports to expose and map
     links:
-      - "db:database"                             # makes keywords db and database
+      - 'db'                                      # links server to db
     depends_on:
       - 'db'                                      # making sure database is started first
   db:
