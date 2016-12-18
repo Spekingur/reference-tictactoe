@@ -52,6 +52,10 @@ cat > ./build/.env <<_EOF_
 GIT_COMMIT=$GIT_COMMIT
 _EOF_
 
+cat > .env <<_EOF_
+GIT_COMMIT=$GIT_COMMIT
+_EOF_
+
 mkdir ./build/public
 cat > ./build/public/version.html <<_EOF_
 <!doctype html>
