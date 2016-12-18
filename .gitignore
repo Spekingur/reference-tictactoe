@@ -5,3 +5,4 @@
 /.idea/
 todo.md
 npm-debug.log
+.env
