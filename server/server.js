@@ -14,7 +14,7 @@ function serverModule(injected) {
     const DbConfig = require('./database.json');
 
     //const dbConfig = DbConfig['dev'];
-    const dbConfig = DbConfig[ENV];
+    const dbConfig = DbConfig[ENV||'dev'];
 
     const ChatAppContext = require('./socket-app/server-app-context');
 
