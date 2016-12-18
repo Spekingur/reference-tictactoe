@@ -4,15 +4,15 @@ I've currently started everything locally from scratch three times now.
 
 ## URLs and access
 1. Jenkins URL and username and password.
-'''
+```
 http://82.221.22.62:8080/
 kennari/CL4PTR4P
-'''
+```
 
 2. Game URL (AWS)
-
-     Production server (always up):
-
+```
+Production server (always up):
+```
 
 ## Scripts
 
