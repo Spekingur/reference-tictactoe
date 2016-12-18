@@ -1,0 +1,23 @@
+version: '2'
+services:
+  server:
+    image: "spekingur/tictactoe:${GIT_COMMIT}"    # tells compose what image to use for server
+    environment:
+      - 'NODE_ENV=prod'                           # production running mode of server
+      - 'PGHOST=postgres'                         # database host name
+      - 'PGUSER=postgres'                         # database user name
+      - 'PGPORT=5432'                             # database port
+      - 'PGPASSWORD=mysecretpassword'             # database password
+      - 'PORT=8080'                               # server port(s)
+    ports:
+      - "8080:8080"                               # ports to expose and map
+    links:
+      - "db:database"                             # makes keywords db and database
+    depends_on:
+      - 'db'                                      # making sure database is started first
+  db:
+    image: postgres
+    environment:
+      - 'POSTGRES_PASSWORD=mysecretpassword'
+    ports:
+      - "5432:5432"
