@@ -5,11 +5,12 @@ I've currently started everything locally from scratch three times now.
 ## URLs and access
 1. Jenkins URL and username and password.
 
-http://82.221.22.62:8080/ - kennari/CL4PTR4P
+     http://82.221.22.62:8080/
+     kennari/CL4PTR4P
 
 2. Game URL (AWS)
 
-Production server (always up):
+     Production server (always up):
 
 
 ## Scripts
@@ -38,6 +39,8 @@ Putting two containers into one for the purpose of deploying joined container to
 
 - AWS Provisioning
 
+No.
+
 - Other scripts
 
 In  the /.bin/ folder I put in various scripts that I might or might not need. May include general install scripts. Some are no more than one line.
@@ -49,13 +52,23 @@ Outline what tests you created.
 
 - UnitTests, server logic TDD (Git commit log)
 
+No.
+
 - API Acceptance test - fluent API
+
+No.
 
 - Load test loop
 
+No.
+
 - UI TDD
 
+No.
+
 - Is the game playable?
+
+No.
 
 
 
@@ -65,6 +78,7 @@ Did you create a data migration.
 
 - Migration up and down
 
+For the aggregate_id column I added this file: https://github.com/Spekingur/reference-tictactoe/blob/master/server/migrations/20161217195742-add-aggregate_id-column.js
 
 
 ## Jenkins
@@ -73,17 +87,23 @@ Do you have the following Jobs and what happens in each Job:
 
 - Commit Stage
 
+I have this. Commit stage builds app, unit tests it, creates a docker image and uploads it to dockerhub.
+
 - Acceptance Stage
 
 - Capacity Stage
 
 - Other
 
+Deployment stage. Deploys ready file by pulling it from dockerhub and setting it up on an always-running AWS server.
+
 
 
 Did you use any of the following features in Jenkins?
 
 - Schedule or commit hooks
+
+I used commit hooks.
 
 - Pipeline
 
