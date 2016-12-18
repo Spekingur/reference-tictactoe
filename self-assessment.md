@@ -4,9 +4,11 @@ I've currently started everything locally from scratch three times now.
 
 ## URLs and access
 1. Jenkins URL and username and password.
+
 http://82.221.22.62:8080/ - kennari/CL4PTR4P
 
 2. Game URL (AWS)
+
 Production server (always up):
 
 
@@ -14,13 +16,30 @@ Production server (always up):
 
 Outline what script files you created and the purpose of each file. Each file should be commented. This could be
 
+- Build everything
+
+https://github.com/Spekingur/reference-tictactoe/blob/master/buildall.sh
+
+Builds everything in one go, both project and docker image. Uploads the result to dockerhub.
+
+- Project build
+
+Builds the project itself.
+
 - Docker build
 
+Creates a docker image but does not upload it to dockerhub.
+
 - Docker compose
+
+https://github.com/Spekingur/reference-tictactoe/blob/master/docker-compose.yml
+
+Putting two containers into one for the purpose of deploying joined container to testing or production
 
 - AWS Provisioning
 
 - Other scripts
+
 In  the /.bin/ folder I put in various scripts that I might or might not need. May include general install scripts. Some are no more than one line.
 
 
