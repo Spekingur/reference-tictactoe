@@ -10,6 +10,11 @@ case "$1" in
   "")                               # input is runserver.sh
     npm run migratedb               # run database migration against dev database
     ;;
+  *)                                # any other input gets an error message
+    echo "Incorrect selection!"
+    echo "Possibly selections are production or leave empty"
+    exit 1
+    ;;
 esac
 
 node run.js                         # start up
