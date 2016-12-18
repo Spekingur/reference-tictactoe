@@ -1,10 +1,10 @@
 version: '2'
 services:
   server:
-    image: spekingur/tictactoe:${GIT_COMMIT}    # tells compose what image to use for server
+    image: spekingur/tictactoe:${GIT_COMMIT}      # tells compose what image to use for server
     environment:
       - 'NODE_ENV=prod'                           # production running mode of server
-      - 'PGHOST=db'                         # database host name
+      - 'PGHOST=db'                               # database host name
       - 'PGPORT=5432'                             # database port
       - 'PGPASSWORD=mysecretpassword'             # database password
       - 'PORT=8080'                               # server port(s)
