@@ -2,9 +2,9 @@
 
 ###Form
 ```
-Given *[event(s)]*
-When *[command]*
-Then *[resulting event(s)]*
+Given [event(s)]
+When [command]
+Then [resulting event(s)]
 ```
 ###Scenarios
 ####Happy path - Success states
