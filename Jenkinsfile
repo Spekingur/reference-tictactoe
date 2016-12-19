@@ -10,10 +10,16 @@ node {
   stage('UnitTests') {
 
   }
-  stage('DockerDeploy') {
+  stage('DockerHubUpload') {
 
   }
-  stage('DeployProduction') {
+  stage('AcceptanceTests'){
+
+  }
+  stage('LoadTests') {
+
+  }
+  stage('Production') {
 
   }
 }
