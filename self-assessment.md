@@ -16,12 +16,10 @@ I've currently started everything locally from scratch three times now.
 Outline what script files you created and the purpose of each file. Each file should be commented. This could be
 
 - Build everything
-
   * https://github.com/Spekingur/reference-tictactoe/blob/master/buildall.sh
   * Builds everything in one go, both project and docker image. Uploads the result to dockerhub.
 
 - Code build
-
   * https://github.com/Spekingur/reference-tictactoe/blob/master/build.sh
   * The dissection of the build script in package.json
 
@@ -38,7 +36,6 @@ Outline what script files you created and the purpose of each file. Each file sh
   * Creates a docker image and uploads to dockerhub.
 
 - Docker compose
-
   * https://github.com/Spekingur/reference-tictactoe/blob/master/docker-compose.yml
   * Putting two containers into one for the purpose of deploying joined container to testing or production.
 
@@ -47,12 +44,10 @@ Outline what script files you created and the purpose of each file. Each file sh
   * Removes all containers and images.
 
 - AWS Provisioning
-
-  * No. But I've made scripts - they are untested and use docker-machine.
   * https://github.com/Spekingur/reference-tictactoe/tree/master/provisioning
+  * Yes and no. I've made scripts but they are unused, untested and use docker-machine.
 
 - Other scripts
-
   * https://github.com/Spekingur/reference-tictactoe/tree/master/.bin
   * I've put a bunch of scripts in here that are not really used (except for docker-remove.sh) but are there for ease of access.
 
