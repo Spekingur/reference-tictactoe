@@ -11,7 +11,7 @@ fi
 # Remove .git from url in order to get https link to repo (assumes https url for GitHub)
 export GITHUB_URL=$(echo $GIT_URL | rev | cut -c 5- | rev)
 
-# Removing docker containers and images before starting build
+# Removing docker containers and images before starting build (might not have this here later on)
 ./.bin/docker-remove.sh
 
 # Going to the right directory and then start build
