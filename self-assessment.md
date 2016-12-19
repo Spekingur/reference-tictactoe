@@ -21,13 +21,18 @@ Outline what script files you created and the purpose of each file. Each file sh
 
   * Builds everything in one go, both project and docker image. Uploads the result to dockerhub.
 
+- Code build
+
+  * https://github.com/Spekingur/reference-tictactoe/blob/master/build.sh
+  * The dissection of the build script in package.json
+
 - Project build
 
   * Builds the project itself.
 
 - Docker build
 
-  * Creates a docker image but does not upload it to dockerhub.
+  * Creates a docker image and uploads to dockerhub.
 
 - Docker compose
 
@@ -37,11 +42,13 @@ Outline what script files you created and the purpose of each file. Each file sh
 
 - AWS Provisioning
 
-  * No.
+  * No. I've made scripts but they are untested and use docker-machine.
+  * https://github.com/Spekingur/reference-tictactoe/tree/master/provisioning
 
 - Other scripts
 
-  * In the /.bin/ folder I put in various scripts that I might or might not need. May include general install scripts. Some are no more than one line.
+  * https://github.com/Spekingur/reference-tictactoe/tree/master/.bin
+  * I've put a bunch of scripts in here that are not really used but are there for ease of access.
 
 
 ## Testing & logic
