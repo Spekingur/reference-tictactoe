@@ -7,10 +7,10 @@ node {
   stage('Build') {
 
   }
-  stage('DockerDeploy') {
-  
-  }
   stage('UnitTests') {
+
+  }
+  stage('DockerDeploy') {
 
   }
   stage('DeployProduction') {
