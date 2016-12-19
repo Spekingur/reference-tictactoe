@@ -2,6 +2,8 @@
 I started out with everything on Windows, which was a mistake. I got sick the following week which stopped from keeping up with everything.
 I've currently started everything locally from scratch three times now.
 
+I stopped short on coding in the unit tests. Currently I've got all the tests left to do along with setting up a Jenkinsfile with a pipeline.
+
 ## URLs and access
 1. Jenkins URL and username and password.
   * http://82.221.22.62:8080/
@@ -58,23 +60,23 @@ Outline what tests you created.
 
 - UnitTests, server logic TDD (Git commit log)
 
-  * No.
+  * Not yet.
 
 - API Acceptance test - fluent API
 
-  * No.
+  * Not yet.
 
 - Load test loop
 
-  * No.
+  * Not yet.
 
 - UI TDD
 
-  * No.
+  * Not yet.
 
 - Is the game playable?
 
-  * No.
+  * Not yet.
 
 
 
@@ -97,11 +99,11 @@ Do you have the following Jobs and what happens in each Job:
 
 - Acceptance Stage
 
-  * No.
+  * Not yet. It's there but doesn't do anything.
 
 - Capacity Stage
 
-  * No.
+  * Not yet. It's there but doesn't do anything.
 
 - Other
 
@@ -121,7 +123,7 @@ Did you use any of the following features in Jenkins?
   * Yes. But not complete.
 
 - Test reports
-  * No.
+  * Not yet.
 
 - Other
   * No.
@@ -132,7 +134,7 @@ Did you use any of the following features in Jenkins?
 Did you do any monitoring?
 
 - URL to monitoring tool. Must be open or include username and pass.
-  * No.
+  * Not yet.
 
 
 ## Other
