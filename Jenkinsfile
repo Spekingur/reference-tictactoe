@@ -7,6 +7,9 @@ node {
   stage('Build') {
 
   }
+  stage('DockerDeploy') {
+  
+  }
   stage('UnitTests') {
 
   }
