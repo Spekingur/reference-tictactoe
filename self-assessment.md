@@ -18,7 +18,6 @@ Outline what script files you created and the purpose of each file. Each file sh
 - Build everything
 
   * https://github.com/Spekingur/reference-tictactoe/blob/master/buildall.sh
-
   * Builds everything in one go, both project and docker image. Uploads the result to dockerhub.
 
 - Code build
@@ -27,28 +26,35 @@ Outline what script files you created and the purpose of each file. Each file sh
   * The dissection of the build script in package.json
 
 - Project build
-
+  * https://github.com/Spekingur/reference-tictactoe/blob/master/build-app.sh
   * Builds the project itself.
 
-- Docker build
+- Prepare docker build
+  * https://github.com/Spekingur/reference-tictactoe/blob/master/docker-prepare.sh
+  * It adds git info to files and copies directories needed for a docker build.
 
+- Docker build
+  * https://github.com/Spekingur/reference-tictactoe/blob/master/docker-build.sh
   * Creates a docker image and uploads to dockerhub.
 
 - Docker compose
 
   * https://github.com/Spekingur/reference-tictactoe/blob/master/docker-compose.yml
+  * Putting two containers into one for the purpose of deploying joined container to testing or production.
 
-  * Putting two containers into one for the purpose of deploying joined container to testing or production
+- Docker remove
+  * https://github.com/Spekingur/reference-tictactoe/blob/master/.bin/docker-remove.sh
+  * Removes all containers and images.
 
 - AWS Provisioning
 
-  * No. I've made scripts but they are untested and use docker-machine.
+  * No. But I've made scripts - they are untested and use docker-machine.
   * https://github.com/Spekingur/reference-tictactoe/tree/master/provisioning
 
 - Other scripts
 
   * https://github.com/Spekingur/reference-tictactoe/tree/master/.bin
-  * I've put a bunch of scripts in here that are not really used but are there for ease of access.
+  * I've put a bunch of scripts in here that are not really used (except for docker-remove.sh) but are there for ease of access.
 
 
 ## Testing & logic
@@ -92,7 +98,7 @@ Do you have the following Jobs and what happens in each Job:
 
 - Commit Stage
 
-  * Yes. Commit stage builds app, unit tests it, creates a docker image and uploads it to dockerhub.
+  * Yes. Commit stage builds app, creates a docker image and uploads it to dockerhub. It is missing unit testing. For now.
 
 - Acceptance Stage
 
@@ -114,7 +120,7 @@ Did you use any of the following features in Jenkins?
   * I used commit hooks. I installed a service in Github called 'Jenkins (Github plugin)'.
 
 - Pipeline
-  * Yes. But not used.
+  * No. I have one but have not finished setting it up.
 
 - Jenkins file
   * Yes. But not complete.
