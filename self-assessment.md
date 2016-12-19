@@ -107,14 +107,14 @@ Did you use any of the following features in Jenkins?
   * I used commit hooks. I installed a service in Github called 'Jenkins (Github plugin)'.
 
 - Pipeline
-  * No.
+  * Yes. But not used.
 
 - Jenkins file
-  * No.
+  * Yes. But not complete.
 
 - Test reports
   * No.
-  
+
 - Other
   * No.
 
